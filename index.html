@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Chat UOL</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img src="assets/logo-uol.svg" alt="LogoUOL">
+            <img class="image" onclick="showAside()" src="assets/logo-people.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        </div>
+        <div class="mensagens">
+            <!-- Mensagens -->
+        </div>
+        <div class="aside-escondido">
+            <aside>
+                <div class="aside aside-escondido">
+                    <div class="aside-header">
+                        <h2>Escolha um contato <br> para enviar mensagem:</h2>
+                    </div>
+                    <div class="itens-aside">
+                        <div class="item" onclick="showCheck(this)">
+                            <span class="span-item"><img src="assets/logo-people.svg" id="todos" alt="">Todos</span>
+                            <div class="check-image">
+                                <img class="check" src="/assets/check.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="aside-subHeader">
+                                <h2>Escolha a visibilidade</h2>
+                            </div>
+                            <div class="itens-aside">
+                                <span id="publico" class="itemTwo" onclick="showCheckTwo(this)">
+                                    <img src="assets/lock-open.svg" alt="">Público
+                                    <div class="check-image">
+                                        <img class="checkTwo" src="/assets/check.svg" alt="">
+                                    </div>
+                                </span>
+                                <span id="reservado" class="itemTwo" onclick="showCheckTwo(this)">
+                                    <img src="assets/lock-closed.svg" alt="">Reservadamente
+                                    <div class="check-image">
+                                        <img class="checkTwo" src="/assets/check.svg" alt="">
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="disable-overlay"></div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="texto-footer">
+                <input class="input" type="text" placeholder="Escreva aqui..."><br>
+                <span class="message-info">Enviando para Todos (Público)</span>
+            </div>
+            <img onclick="enviarMensagem()" src="assets/vector.svg" alt="">
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
